@@ -164,7 +164,7 @@ feature {NONE} -- Implementation
 				i := i + 1
 			end
 				-- 4) Find values for `alpha' array
-			create alpha.make_filled (0.0, 0, n - 1)
+			create alpha.make_filled (0.0, 1, n - 1)
 			from i := 1
 			until i > n - 1
 			loop
@@ -173,9 +173,9 @@ feature {NONE} -- Implementation
 			end
 				-- 5) Create new arrays `c', `l', `mu', and `z' of size n + 1.
 				-- 6) Set `l'[0] = 1 and set `mu'[0] and `z'[0] = 0.
-			create l.make_filled (0.0, 0, n + 1)
-			create mu.make_filled (0.0, 0, n + 1)
-			create z.make_filled (0.0, 0, n + 1)
+			create l.make_filled (0.0, 0, n)
+			create mu.make_filled (0.0, 0, n)
+			create z.make_filled (0.0, 0, n)
 			l[0] := 1.0
 				-- 7) For i = 1,...,n - 1  ... fill the above arrays
 			from i := 1
